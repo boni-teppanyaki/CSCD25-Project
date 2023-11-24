@@ -9,7 +9,7 @@ GS-score, calculated as the average cosine similarity between its communities an
 3.	How does the GS-score of a user correlate to the GS-score of its parent-universe?
 
 ## Methods
-GS-score is defined as the average cosine similarity between its communities and its center of mass. The attention should be focused on only users who are active in at least 2 political subreddits. The subset of political communities can be formed by manually identifying several major political subreddits, and then looking for similar subreddits.
-1.	With the processed data, calculate GS-score for all users and store it in a new column. The plot of the GS-score distribution can be broken down by number of communities.
+The attention should be focused on only users who are active in at least 1 political subreddits. The subset of political communities can be formed by manually identifying political subreddits (after exploring the dataset, there are only 92 distinctive subreddits; manual identification is then quick and accurate)
+1.	With the processed data, calculate GS-score for all users and store it in a new column. GS-score is defined as the average cosine similarity between its communities and its center of mass. The plot of the GS-score distribution can be broken down by number of communities with range specified.
 2.	Examine all the occurrences of when users join a new community, and then calculate the probability that they are still engaged in the community after a certain period (6 months). Draw a line plot to see how does the probability change along with the magnitude of the GS-score. Compare the probability of generalists and specialists.
 3.	Define parent-universe as the set of users that a user replied to. Calculate the average GS-score of all users’ parent-universe. Plot the distribution of the parent universe GS-scores as a function of user GS-score with a box plot.
